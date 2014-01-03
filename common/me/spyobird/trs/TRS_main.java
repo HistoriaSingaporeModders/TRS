@@ -1,7 +1,9 @@
 package me.spyobird.trs;
 
+import me.spyobird.trs.block.BlockRegister;
 import me.spyobird.trs.lib.CommonProxy;
 import me.spyobird.trs.lib.References;
+import me.spyobird.trs.lib.config.ConfigurationHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -24,7 +26,8 @@ public class TRS_main
 	@EventHandler
 	public void preLoad(FMLPreInitializationEvent event)
 	{
-		
+		ConfigurationHandler.ConfigInit(event.getSuggestedConfigurationFile());
+		BlockRegister.BlockInit();
 	}
 	
 	@EventHandler
