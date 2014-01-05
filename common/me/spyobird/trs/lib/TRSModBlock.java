@@ -1,5 +1,6 @@
 package me.spyobird.trs.lib;
 
+import me.spyobird.trs.lib.interfaces.IAdvancedID;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -7,18 +8,20 @@ import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class TRSModBlock extends Block
+public class TRSModBlock extends Block implements IAdvancedID
 {
 	private String texture;
 	private String key;
 	private String catagory;
+	private int code;
 	
-	public TRSModBlock(int id, Material material)
+	public TRSModBlock(int id, Material material, int code)
     {
 	    super(id, material);
 	    this.setCreativeTab(CreativeTabs.tabMisc);
 	    this.setHardness(1.5F);
 	    this.setResistance(10.0F);
+	    this.setCode(code);
     }
 	
 	@Override
@@ -96,6 +99,18 @@ public class TRSModBlock extends Block
 		{
 			key = this.getSimpleKey();
 		}
-		return String.format("[%n:%n:%n:#%n]", References.MODID.toUpperCase(), cat, key, this.blockID);
+		return String.format("[%n:%n:%n:#%n]", References.MODID.toUpperCase(), cat, key, this.blockID + this.getCode());
 	}
+
+	@Override
+    public boolean setCode(int code)
+    {
+	    return true;
+    }
+
+	@Override
+    public int getCode()
+    {
+	    return code;
+    }
 }
