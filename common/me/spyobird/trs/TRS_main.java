@@ -1,6 +1,7 @@
 package me.spyobird.trs;
 
 import me.spyobird.trs.block.BlockRegister;
+import me.spyobird.trs.item.ItemRegister;
 import me.spyobird.trs.lib.CommonProxy;
 import me.spyobird.trs.lib.References;
 import me.spyobird.trs.lib.config.ConfigurationHandler;
@@ -28,6 +29,7 @@ public class TRS_main
 	{
 		ConfigurationHandler.ConfigInit(event.getSuggestedConfigurationFile());
 		BlockRegister.BlockInit();
+		ItemRegister.ItemInit();
 	}
 	
 	@EventHandler
