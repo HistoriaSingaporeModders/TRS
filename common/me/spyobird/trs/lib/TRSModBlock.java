@@ -17,6 +17,8 @@ public class TRSModBlock extends Block
     {
 	    super(id, material);
 	    this.setCreativeTab(CreativeTabs.tabMisc);
+	    this.setHardness(1.5F);
+	    this.setResistance(10.0F);
     }
 	
 	@Override
@@ -64,6 +66,16 @@ public class TRSModBlock extends Block
 		return this.getUnlocalizedName().substring(5);
 	}
 	
+	public String getSimpleKey()
+	{
+		return this.key;
+	}
+	
+	public String getSimpleCatagory()
+	{
+		return this.catagory;
+	}
+	
 	public String getAdvancedID()
 	{
 		String cat;
@@ -74,7 +86,7 @@ public class TRSModBlock extends Block
 		}
 		else
 		{
-			cat = this.catagory;
+			cat = this.getSimpleCatagory();
 		}
 		if (this.key == null)
 		{
@@ -82,8 +94,8 @@ public class TRSModBlock extends Block
 		}
 		else
 		{
-			key = this.key;
+			key = this.getSimpleKey();
 		}
-		return String.format("[%n:%n#%n]", cat, key, this.blockID);
+		return String.format("[%n:%n:%n:#%n]", References.MODID.toUpperCase(), cat, key, this.blockID);
 	}
 }

@@ -12,6 +12,8 @@ public class BlockTinOre extends TRSModBlock
 	    this.setUnlocalizedName(Strings.BLOCKTINORE_UNLOCAL);
 	    this.setTextureName(Strings.BLOCKTINORE_TEXTURE);
 	    this.setKey(Strings.BLOCKTINORE_KEY);
-	    this.setCatagory(Strings.BLOCKTINORE_CATAGORY);
+	    this.setCatagory(Strings.BLOCKORE_CATAGORY);
+	    this.setHardness(3.0F);
+	    this.setResistance(5.0F);
     }
 }

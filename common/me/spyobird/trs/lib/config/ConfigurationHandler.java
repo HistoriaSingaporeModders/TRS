@@ -14,7 +14,8 @@ public class ConfigurationHandler
 		
 		config.load();
 		
-		IDs.BLOCKTINOREID = config.getBlock(Strings.BLOCKTINORE_UNLOCAL, IDs.BLOCKTINOREID_DEFAULT).getInt();
+		IDs.BLOCKTINOREID = config.getBlock(Strings.BLOCKTINORE_KEY, IDs.BLOCKTINOREID_DEFAULT).getInt();
+		IDs.BLOCKTINSTORAGEID = config.getBlock(Strings.BLOCKTINSTORAGE_KEY, IDs.BLOCKTINSTORAGEID_DEFAULT).getInt();
 		
 		config.save();
 	}
