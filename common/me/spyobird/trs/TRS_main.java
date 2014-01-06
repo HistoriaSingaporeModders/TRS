@@ -16,7 +16,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
 @Mod(modid = References.MODID, name = References.NAME, version = References.VERSION)
-@NetworkMod(clientSideRequired = true, serverSideRequired = false)
+@NetworkMod(clientSideRequired = true, serverSideRequired = false, channels = References.MODID)
 public class TRS_main
 {
 	@Instance(References.MODID)
@@ -37,7 +37,7 @@ public class TRS_main
 	@EventHandler
 	public void load(FMLInitializationEvent event)
 	{
-
+		
 	}
 	
 	@EventHandler

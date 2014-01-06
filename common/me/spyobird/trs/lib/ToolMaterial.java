@@ -1,6 +1,5 @@
 package me.spyobird.trs.lib;
 
-import me.spyobird.trs.item.ItemRegister;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraftforge.common.EnumHelper;
 
