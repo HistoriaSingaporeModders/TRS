@@ -17,6 +17,9 @@ public class ConfigurationHandler
 		IDs.BLOCKTINOREID = config.getBlock(Strings.BLOCKTINORE_KEY, IDs.BLOCKTINOREID_DEFAULT).getInt();
 		IDs.BLOCKTINSTORAGEID = config.getBlock(Strings.BLOCKTINSTORAGE_KEY, IDs.BLOCKTINSTORAGEID_DEFAULT).getInt();
 		
+		IDs.ITEMTININGOTID = config.getItem(Strings.ITEMTININGOT_KEY, IDs.ITEMTININGOTID_DEFAULT).getInt();
+		IDs.ITEMTINSWORDID = config.getItem(Strings.ITEMTINSWORD_KEY, IDs.ITEMTINSWORDID_DEFAULT).getInt();
+		
 		config.save();
 	}
 }

@@ -79,6 +79,18 @@ public class TRSModBlock extends Block implements IAdvancedID
 		return this.catagory;
 	}
 	
+	@Override
+    public boolean setCode(int code)
+    {
+	    return true;
+    }
+
+	@Override
+    public int getCode()
+    {
+	    return code;
+    }
+	
 	public String getAdvancedID()
 	{
 		String cat;
@@ -101,16 +113,4 @@ public class TRSModBlock extends Block implements IAdvancedID
 		}
 		return String.format("[%n:%n:%n:#%n]", References.MODID.toUpperCase(), cat, key, this.blockID + this.getCode());
 	}
-
-	@Override
-    public boolean setCode(int code)
-    {
-	    return true;
-    }
-
-	@Override
-    public int getCode()
-    {
-	    return code;
-    }
 }

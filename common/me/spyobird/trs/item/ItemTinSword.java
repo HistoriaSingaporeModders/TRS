@@ -1,33 +1,49 @@
-package me.spyobird.trs.lib;
+package me.spyobird.trs.item;
 
+import me.spyobird.trs.lib.IDs;
+import me.spyobird.trs.lib.References;
+import me.spyobird.trs.lib.Strings;
+import me.spyobird.trs.lib.ToolMaterial;
 import me.spyobird.trs.lib.interfaces.IAdvancedID;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class TRSModItem extends Item implements IAdvancedID
+public class ItemTinSword extends ItemSword implements IAdvancedID
 {
 	private String texture;
 	private String key;
 	private String catagory;
 	private int code;
 	
-	public TRSModItem(int id, int code)
+	public ItemTinSword(int id)
     {
-	    super(id - References.ID_DISPLACEMENT_VALUE);
-	    this.setCreativeTab(CreativeTabs.tabMisc);
-	    this.setCode(code);
+	    super(id - References.ID_DISPLACEMENT_VALUE, ToolMaterial.Tin);
+	    this.setCreativeTab(CreativeTabs.tabBlock);
+	    this.setUnlocalizedName(Strings.ITEMTINSWORD_UNLOCAL);
+	    this.setTextureName(Strings.ITEMTINSWORD_TEXTURE);
+	    this.setKey(Strings.ITEMTINSWORD_KEY);
+	    this.setCatagory(Strings.ITEMWEAPON_CATAGORY);
+	    this.setCode(IDs.ITEMTINSWORD_CODE);
     }
 	
+	@Override
+	public boolean getIsRepairable(ItemStack itemtool, ItemStack itemstack)
+	{
+		return ItemRegister.TinIngot.itemID == itemstack.itemID ? true : super.getIsRepairable(itemtool, itemstack);
+	}
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister register)
 	{
         itemIcon = register.registerIcon(String.format("%s:%s", References.MODID, this.getTextureName()));
 	}
-	
+
 	public Item setTextureName(String texture)
 	{
 		this.texture = texture;
