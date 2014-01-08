@@ -1,7 +1,7 @@
 package me.spyobird.trs.lib.event;
 
-import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.Event.Result;
+import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.terraingen.OreGenEvent.GenerateMinable;
 
 public class EventHandlerOreGen

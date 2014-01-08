@@ -1,14 +1,15 @@
 package me.spyobird.trs;
 
-import net.minecraftforge.common.MinecraftForge;
 import me.spyobird.trs.block.BlockRegister;
 import me.spyobird.trs.item.ItemRegister;
 import me.spyobird.trs.lib.CommonProxy;
 import me.spyobird.trs.lib.References;
 import me.spyobird.trs.lib.ToolMaterial;
 import me.spyobird.trs.lib.config.ConfigurationHandler;
+import me.spyobird.trs.lib.event.EventHandlerMobSpawn;
 import me.spyobird.trs.lib.event.EventHandlerOreGen;
 import me.spyobird.trs.lib.worldgen.TRSModWorldGenOre;
+import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -30,6 +31,7 @@ public class TRS_main
 	public static CommonProxy proxy;
 	
 	EventHandlerOreGen oregen = new EventHandlerOreGen();
+	EventHandlerMobSpawn mobspawn = new EventHandlerMobSpawn();
 	
 	@EventHandler
 	public void preLoad(FMLPreInitializationEvent event)
@@ -40,13 +42,13 @@ public class TRS_main
 		ItemRegister.ItemInit();
 		
 		GameRegistry.registerWorldGenerator(new TRSModWorldGenOre());
-		
 	}
 	
 	@EventHandler
 	public void load(FMLInitializationEvent event)
 	{
 		MinecraftForge.ORE_GEN_BUS.register(oregen);
+		MinecraftForge.EVENT_BUS.register(mobspawn);
 	}
 	
 	@EventHandler
