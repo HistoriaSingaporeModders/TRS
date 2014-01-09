@@ -4,6 +4,7 @@ import java.io.File;
 
 import me.spyobird.trs.lib.IDs;
 import me.spyobird.trs.lib.Strings;
+import me.spyobird.trs.lib.Values;
 import net.minecraftforge.common.Configuration;
 
 public class ConfigurationHandler
@@ -19,6 +20,9 @@ public class ConfigurationHandler
 		
 		IDs.ITEMTININGOTID = config.getItem(Strings.ITEMTININGOT_KEY, IDs.ITEMTININGOTID_DEFAULT).getInt();
 		IDs.ITEMTINSWORDID = config.getItem(Strings.ITEMTINSWORD_KEY, IDs.ITEMTINSWORDID_DEFAULT).getInt();
+		
+		Values.DISABLEOREGEN = config.get(Strings.UTIL_CONFIG_NAME, "DISABLEOREGEN", Values.DISABLEOREGEN_DEFAULT).getBoolean(Values.DISABLEOREGEN_DEFAULT);
+		Values.CUSTOMMOBSPAWNS = config.get(Strings.UTIL_CONFIG_NAME, "CUSTOMMOBSPAWNS", Values.CUSTOMMOBSPAWNS_DEFAULT).getBoolean(Values.CUSTOMMOBSPAWNS_DEFAULT);
 		
 		config.save();
 	}

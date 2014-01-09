@@ -35,4 +35,6 @@ public class Strings
 	public static final String PICKAXE_TOOL_NAME = "pickaxe";
 	
 	public static final String ENUM_TOOL_MATERIAL_NAME_TIN = "TIN";
+	
+	public static final String UTIL_CONFIG_NAME = "util";
 }

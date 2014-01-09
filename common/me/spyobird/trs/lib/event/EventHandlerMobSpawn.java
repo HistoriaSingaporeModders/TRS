@@ -1,5 +1,6 @@
 package me.spyobird.trs.lib.event;
 
+import me.spyobird.trs.lib.Values;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.monster.EntityEnderman;
@@ -15,15 +16,18 @@ import net.minecraftforge.event.entity.living.LivingSpawnEvent;
 public class EventHandlerMobSpawn
 {
 	@ForgeSubscribe
-	public void MobSpawn(LivingSpawnEvent event)
+	public void CustomMobSpawn(LivingSpawnEvent event)
 	{
-		if (event.entity instanceof EntityCow || event.entity instanceof EntityHorse || event.entity instanceof EntitySheep || event.entity instanceof EntityMooshroom || event.entity instanceof EntityZombie || event.entity instanceof EntitySkeleton || event.entity instanceof EntityCreeper || event.entity instanceof EntityEnderman)
+		if (Values.CUSTOMMOBSPAWNS == true)
 		{
-			Entity mob = event.entity;
-			if (mob.isEntityAlive() == true)
+			if (event.entity instanceof EntityCow || event.entity instanceof EntityHorse || event.entity instanceof EntitySheep || event.entity instanceof EntityMooshroom || event.entity instanceof EntityZombie || event.entity instanceof EntitySkeleton || event.entity instanceof EntityCreeper || event.entity instanceof EntityEnderman)
 			{
-				mob.setInvisible(true);
-				mob.setDead();
+				Entity mob = event.entity;
+				if (mob.isEntityAlive() == true)
+				{
+					mob.setInvisible(true);
+					mob.setDead();
+				}
 			}
 		}
 	}
