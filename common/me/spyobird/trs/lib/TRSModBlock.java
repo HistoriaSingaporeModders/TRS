@@ -19,9 +19,9 @@ public class TRSModBlock extends Block implements IAdvancedID
     {
 	    super(id, material);
 	    this.setCreativeTab(CreativeTabs.tabMisc);
+	    this.setCode(code);
 	    this.setHardness(1.5F);
 	    this.setResistance(10.0F);
-	    this.setCode(code);
     }
 	
 	@Override
