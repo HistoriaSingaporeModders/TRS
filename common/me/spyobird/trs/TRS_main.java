@@ -5,11 +5,13 @@ import me.spyobird.trs.item.ItemRegister;
 import me.spyobird.trs.lib.CommonProxy;
 import me.spyobird.trs.lib.RecipesManager;
 import me.spyobird.trs.lib.References;
+import me.spyobird.trs.lib.TRSModCreativeTabs;
 import me.spyobird.trs.lib.ToolMaterial;
 import me.spyobird.trs.lib.config.ConfigurationHandler;
 import me.spyobird.trs.lib.event.EventHandlerMobSpawn;
 import me.spyobird.trs.lib.event.EventHandlerOreGen;
 import me.spyobird.trs.lib.worldgen.TRSModWorldGenOre;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -20,6 +22,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(modid = References.MODID, name = References.NAME, version = References.VERSION)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false, channels = References.MODID)
@@ -31,8 +34,10 @@ public class TRS_main
 	@SidedProxy(clientSide = References.CLIENT_PROXY, serverSide = References.COMMON_PROXY)
 	public static CommonProxy proxy;
 	
-	EventHandlerOreGen oregen = new EventHandlerOreGen();
-	EventHandlerMobSpawn mobspawn = new EventHandlerMobSpawn();
+	public static EventHandlerOreGen oregen = new EventHandlerOreGen();
+	public static EventHandlerMobSpawn mobspawn = new EventHandlerMobSpawn();
+	
+	public static TRSModCreativeTabs creativetabs = new TRSModCreativeTabs(CreativeTabs.getNextID(), "TRS");
 	
 	@EventHandler
 	public void preLoad(FMLPreInitializationEvent event)
@@ -57,6 +62,12 @@ public class TRS_main
 	{
 		RecipesManager.Recipes();
 		RecipesManager.FurnaceRecipes();
+		LanguageRegistry.instance().addStringLocalization("itemGroup.TRS", "en_US", "The Real Singapore");
 		System.out.println("Mod is fully loaded");
+	}
+	
+	public TRS_main getInstance()
+	{
+		return instance;
 	}
 }

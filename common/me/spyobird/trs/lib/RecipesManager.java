@@ -25,6 +25,14 @@ public class RecipesManager
 			"S",
 			'X', ItemRegister.TinIngot, 'S', Item.stick
 		});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(ItemRegister.TinPickaxe, 1), new Object[]
+		{
+			"XXX",
+			" S ",
+			" S ",
+			'X', ItemRegister.TinIngot, 'S', Item.stick
+		});
 	}
 	
 	public static void FurnaceRecipes()

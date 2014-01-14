@@ -23,18 +23,23 @@ public class Strings
 	
 	public static final String ITEMTININGOT_UNLOCAL = "TinIngot";
 	public static final String ITEMTINSWORD_UNLOCAL = "TinSword";
+	public static final String ITEMTINPICKAXE_UNLOCAL = "TinPickaxe";
 	
 	public static final String ITEMTININGOT_LOCAL = "Tin Ingot";
 	public static final String ITEMTINSWORD_LOCAL = "Tin Sword";
+	public static final String ITEMTINPICKAXE_LOCAL = "Tin Pickaxe";
 	
 	public static final String ITEMTININGOT_TEXTURE = "Ingot_Tin";
 	public static final String ITEMTINSWORD_TEXTURE = "Sword_Tin";
+	public static final String ITEMTINPICKAXE_TEXTURE = "Pickaxe_Tin";
 	
 	public static final String ITEMTININGOT_KEY = "TIN_INGOT";
 	public static final String ITEMTINSWORD_KEY = "TIN_SWORD";
+	public static final String ITEMTINPICKAXE_KEY = "TIN_PICKAXE";
 	
 	public static final String ITEMMATERIAL_CATAGORY = "MATERIAL";
 	public static final String ITEMWEAPON_CATAGORY = "WEAPON";
+	public static final String ITEMTOOL_CATAGORY = "TOOL";
 	
 	public static final String PICKAXE_TOOL_NAME = "pickaxe";
 	
