@@ -10,8 +10,13 @@ import me.spyobird.trs.lib.ToolMaterial;
 import me.spyobird.trs.lib.config.ConfigurationHandler;
 import me.spyobird.trs.lib.event.EventHandlerMobSpawn;
 import me.spyobird.trs.lib.event.EventHandlerOreGen;
+import me.spyobird.trs.lib.worldgen.TRSModDungeonChestGen;
 import me.spyobird.trs.lib.worldgen.TRSModWorldGenOre;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.WeightedRandomChestContent;
+import net.minecraftforge.client.MinecraftForgeClient;
+import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -46,8 +51,10 @@ public class TRS_main
 		ToolMaterial.ToolMaterialInit();
 		BlockRegister.BlockInit();
 		ItemRegister.ItemInit();
+		TRSModDungeonChestGen.GenInit();
 		
 		GameRegistry.registerWorldGenerator(new TRSModWorldGenOre());
+
 	}
 	
 	@EventHandler
