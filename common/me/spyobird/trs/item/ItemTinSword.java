@@ -1,12 +1,12 @@
 package me.spyobird.trs.item;
 
+import me.spyobird.trs.TRS_main;
 import me.spyobird.trs.lib.IDs;
 import me.spyobird.trs.lib.References;
 import me.spyobird.trs.lib.Strings;
 import me.spyobird.trs.lib.ToolMaterial;
 import me.spyobird.trs.lib.interfaces.IAdvancedID;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
@@ -23,7 +23,7 @@ public class ItemTinSword extends ItemSword implements IAdvancedID
 	public ItemTinSword(int id)
     {
 	    super(id - References.ID_DISPLACEMENT_VALUE, ToolMaterial.Tin);
-	    this.setCreativeTab(CreativeTabs.tabBlock);
+	    this.setCreativeTab(TRS_main.creativetabs);
 	    this.setUnlocalizedName(Strings.ITEMTINSWORD_UNLOCAL);
 	    this.setTextureName(Strings.ITEMTINSWORD_TEXTURE);
 	    this.setKey(Strings.ITEMTINSWORD_KEY);

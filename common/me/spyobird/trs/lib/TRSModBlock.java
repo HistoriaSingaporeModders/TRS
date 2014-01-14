@@ -1,10 +1,10 @@
 package me.spyobird.trs.lib;
 
+import me.spyobird.trs.TRS_main;
 import me.spyobird.trs.lib.interfaces.IAdvancedID;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -18,7 +18,7 @@ public class TRSModBlock extends Block implements IAdvancedID
 	public TRSModBlock(int id, Material material, int code)
     {
 	    super(id, material);
-	    this.setCreativeTab(CreativeTabs.tabMisc);
+	    this.setCreativeTab(TRS_main.creativetabs);
 	    this.setCode(code);
 	    this.setHardness(1.5F);
 	    this.setResistance(10.0F);
