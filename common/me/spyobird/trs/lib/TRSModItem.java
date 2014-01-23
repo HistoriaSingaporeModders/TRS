@@ -12,13 +12,11 @@ public class TRSModItem extends Item implements IAdvancedID
 	private String texture;
 	private String key;
 	private String catagory;
-	private int code;
 	
-	public TRSModItem(int id, int code)
+	public TRSModItem(int id)
     {
 	    super(id - References.ID_DISPLACEMENT_VALUE);
 	    this.setCreativeTab(TRS_main.creativetabs);
-	    this.setCode(code);
     }
 	
 	@Override
@@ -77,18 +75,6 @@ public class TRSModItem extends Item implements IAdvancedID
 	}
 	
 	@Override
-    public boolean setCode(int code)
-    {
-	    return true;
-    }
-
-	@Override
-    public int getCode()
-    {
-	    return code;
-    }
-	
-	@Override
 	public String getAdvancedID()
 	{
 		String cat;
@@ -109,6 +95,6 @@ public class TRSModItem extends Item implements IAdvancedID
 		{
 			key = this.getSimpleKey();
 		}
-		return String.format("[%n:%n:%n:#%n]", References.MODID.toUpperCase(), cat, key, this.itemID + this.getCode());
+		return String.format("[%n:%n:%n:#%n]", References.MODID.toUpperCase(), cat, key, this.itemID);
 	}
 }

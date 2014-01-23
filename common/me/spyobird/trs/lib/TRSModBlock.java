@@ -13,13 +13,11 @@ public class TRSModBlock extends Block implements IAdvancedID
 	private String texture;
 	private String key;
 	private String catagory;
-	private int code;
 	
-	public TRSModBlock(int id, Material material, int code)
+	public TRSModBlock(int id, Material material)
     {
 	    super(id, material);
 	    this.setCreativeTab(TRS_main.creativetabs);
-	    this.setCode(code);
 	    this.setHardness(1.5F);
 	    this.setResistance(10.0F);
     }
@@ -79,18 +77,6 @@ public class TRSModBlock extends Block implements IAdvancedID
 		return this.catagory;
 	}
 	
-	@Override
-    public boolean setCode(int code)
-    {
-	    return true;
-    }
-
-	@Override
-    public int getCode()
-    {
-	    return code;
-    }
-	
 	public String getAdvancedID()
 	{
 		String cat;
@@ -111,6 +97,6 @@ public class TRSModBlock extends Block implements IAdvancedID
 		{
 			key = this.getSimpleKey();
 		}
-		return String.format("[%n:%n:%n:#%n]", References.MODID.toUpperCase(), cat, key, this.blockID + this.getCode());
+		return String.format("[%n:%n:%n:#%n]", References.MODID.toUpperCase(), cat, key, this.blockID);
 	}
 }

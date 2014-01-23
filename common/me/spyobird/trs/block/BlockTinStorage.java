@@ -1,15 +1,14 @@
 package me.spyobird.trs.block;
 
-import net.minecraft.block.material.Material;
-import me.spyobird.trs.lib.IDs;
 import me.spyobird.trs.lib.Strings;
 import me.spyobird.trs.lib.TRSModBlock;
+import net.minecraft.block.material.Material;
 
 public class BlockTinStorage extends TRSModBlock
 {
 	public BlockTinStorage(int id)
     {
-	    super(id, Material.iron, IDs.BLOCKTINSTORAGE_CODE);
+	    super(id, Material.iron);
 	    this.setUnlocalizedName(Strings.BLOCKTINSTORAGE_UNLOCAL);
 	    this.setTextureName(Strings.BLOCKTINSTORAGE_TEXTURE);
 	    this.setKey(Strings.BLOCKTINSTORAGE_KEY);
