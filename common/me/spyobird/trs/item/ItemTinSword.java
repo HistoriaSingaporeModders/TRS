@@ -1,7 +1,6 @@
 package me.spyobird.trs.item;
 
 import me.spyobird.trs.TRS_main;
-import me.spyobird.trs.lib.IDs;
 import me.spyobird.trs.lib.References;
 import me.spyobird.trs.lib.Strings;
 import me.spyobird.trs.lib.ToolMaterial;
@@ -18,7 +17,6 @@ public class ItemTinSword extends ItemSword implements IAdvancedID
 	private String texture;
 	private String key;
 	private String catagory;
-	private int code;
 	
 	public ItemTinSword(int id)
     {
@@ -28,7 +26,6 @@ public class ItemTinSword extends ItemSword implements IAdvancedID
 	    this.setTextureName(Strings.ITEMTINSWORD_TEXTURE);
 	    this.setKey(Strings.ITEMTINSWORD_KEY);
 	    this.setCatagory(Strings.ITEMWEAPON_CATAGORY);
-	    this.setCode(IDs.ITEMTINSWORD_CODE);
     }
 	
 	@Override
@@ -91,19 +88,7 @@ public class ItemTinSword extends ItemSword implements IAdvancedID
 	{
 		return this.catagory;
 	}
-	
-	@Override
-    public boolean setCode(int code)
-    {
-	    return true;
-    }
 
-	@Override
-    public int getCode()
-    {
-	    return code;
-    }
-	
 	@Override
 	public String getAdvancedID()
 	{
@@ -125,6 +110,6 @@ public class ItemTinSword extends ItemSword implements IAdvancedID
 		{
 			key = this.getSimpleKey();
 		}
-		return String.format("[%n:%n:%n:#%n]", References.MODID.toUpperCase(), cat, key, this.itemID + this.getCode());
+		return String.format("[%n:%n:%n:#%n]", References.MODID.toUpperCase(), cat, key, this.itemID);
 	}
 }

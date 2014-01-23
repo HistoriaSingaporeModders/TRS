@@ -1,7 +1,6 @@
 package me.spyobird.trs.item;
 
 import me.spyobird.trs.TRS_main;
-import me.spyobird.trs.lib.IDs;
 import me.spyobird.trs.lib.References;
 import me.spyobird.trs.lib.Strings;
 import me.spyobird.trs.lib.ToolMaterial;
@@ -18,7 +17,6 @@ public class ItemTinPickaxe extends ItemPickaxe implements IAdvancedID
 	private String texture;
 	private String key;
 	private String catagory;
-	private int code;
 	
 	public ItemTinPickaxe(int id)
     {
@@ -28,7 +26,6 @@ public class ItemTinPickaxe extends ItemPickaxe implements IAdvancedID
 	    this.setTextureName(Strings.ITEMTINPICKAXE_TEXTURE);
 	    this.setKey(Strings.ITEMTINPICKAXE_KEY);
 	    this.setCatagory(Strings.ITEMTOOL_CATAGORY);
-	    this.setCode(IDs.ITEMTINPICKAXE_CODE);
     }
 	
 	@Override
@@ -93,18 +90,6 @@ public class ItemTinPickaxe extends ItemPickaxe implements IAdvancedID
 	}
 	
 	@Override
-    public boolean setCode(int code)
-    {
-	    return true;
-    }
-
-	@Override
-    public int getCode()
-    {
-	    return code;
-    }
-	
-	@Override
 	public String getAdvancedID()
 	{
 		String cat;
@@ -125,6 +110,6 @@ public class ItemTinPickaxe extends ItemPickaxe implements IAdvancedID
 		{
 			key = this.getSimpleKey();
 		}
-		return String.format("[%n:%n:%n:#%n]", References.MODID.toUpperCase(), cat, key, this.itemID + this.getCode());
+		return String.format("[%n:%n:%n:#%n]", References.MODID.toUpperCase(), cat, key, this.itemID);
 	}
 }
