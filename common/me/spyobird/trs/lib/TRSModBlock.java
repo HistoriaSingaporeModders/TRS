@@ -18,8 +18,6 @@ public class TRSModBlock extends Block implements IAdvancedID
     {
 	    super(id, material);
 	    this.setCreativeTab(TRS_main.creativetabs);
-	    this.setHardness(1.5F);
-	    this.setResistance(10.0F);
     }
 	
 	@Override
@@ -77,6 +75,7 @@ public class TRSModBlock extends Block implements IAdvancedID
 		return this.catagory;
 	}
 	
+	@Override
 	public String getAdvancedID()
 	{
 		String cat;

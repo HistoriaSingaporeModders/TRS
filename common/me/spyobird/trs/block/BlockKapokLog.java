@@ -25,6 +25,7 @@ public class BlockKapokLog extends TRSModBlock
 	    this.setUnlocalizedName(Strings.BLOCKKAPOKLOG_UNLOCAL);
 	    this.setTextureName(Strings.BLOCKKAPOKLOG_TEXTURE);
 	    this.setKey(Strings.BLOCKKAPOKLOG_KEY);
+	    this.setCatagory(Strings.BLOCKLOG_CATAGORY);
 	    this.setHardness(2.0F);
 	    this.setResistance(3.34F);
     }

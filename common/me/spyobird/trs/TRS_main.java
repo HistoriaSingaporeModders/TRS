@@ -11,7 +11,7 @@ import me.spyobird.trs.lib.config.ConfigurationHandler;
 import me.spyobird.trs.lib.event.EventHandlerMobSpawn;
 import me.spyobird.trs.lib.event.EventHandlerOreGen;
 import me.spyobird.trs.lib.worldgen.TRSModDungeonChestGen;
-import me.spyobird.trs.lib.worldgen.TRSModWorldGenOre;
+import me.spyobird.trs.lib.worldgen.TRSModWorldGen;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
@@ -49,7 +49,7 @@ public class TRS_main
 		ItemRegister.ItemInit();
 		TRSModDungeonChestGen.GenInit();
 		
-		GameRegistry.registerWorldGenerator(new TRSModWorldGenOre());
+		GameRegistry.registerWorldGenerator(new TRSModWorldGen());
 
 	}
 	

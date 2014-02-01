@@ -14,5 +14,6 @@ public class BlockTinStorage extends TRSModBlock
 	    this.setKey(Strings.BLOCKTINSTORAGE_KEY);
 	    this.setCatagory(Strings.BLOCKSTORAGE_CATAGORY);
 	    this.setHardness(4.0F);
+	    this.setResistance(10.0F);
     }
 }
