@@ -1,12 +1,9 @@
 package me.spyobird.trs.block;
 
-import java.util.Random;
-
 import me.spyobird.trs.lib.References;
 import me.spyobird.trs.lib.Strings;
 import me.spyobird.trs.lib.TRSModBlockLeaf;
 import me.spyobird.trs.lib.render.ColourizerLeaves;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
@@ -76,18 +73,18 @@ public class BlockKapokLeaf extends TRSModBlockLeaf implements IShearable
     	}
     }
 
-    public int idDropped(int id, Random random, int i)
-    {
-        return Block.sapling.blockID;
-    }
-
     public void dropBlockAsItemWithChance(World world, int x, int y, int z, int m, float f, int i)
     {
         if (!world.isRemote)
         {
+        	if (world.rand.nextInt(20) == 0)
+            {
+                this.dropBlockAsItem_do(world, x, y, z, new ItemStack(BlockRegister.KapokSapling, 1));
+            }
+        	
         	if (world.rand.nextInt(40) == 0)
         	{
-                this.dropBlockAsItem_do(world, x, y, z, new ItemStack(Item.appleRed, 1, 0));
+                this.dropBlockAsItem_do(world, x, y, z, new ItemStack(Item.appleRed, 1));
         	}
         }
     }

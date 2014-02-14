@@ -37,12 +37,11 @@ public class TRSModWorldGen implements IWorldGenerator
 			TRSModWorldGenOre.addOreSpawn(BlockRegister.Granite, world, rand, chunkX, chunkZ, 16, 16, 24, 16, 12, 128);
 		}
 		
-		for (int chance = 0; chance < 24; chance++)
+		for (int chance = 0; chance < 6; chance++)
 		{
-			int x1 = chunkX + rand.nextInt(16);
-			int y1 = rand.nextInt(90);
-			int z1 = chunkZ + rand.nextInt(16);
-			(new TRSModWorldGenKapokTree(false)).generate(world, rand, x1, y1, z1);
+			int k = chunkX + rand.nextInt(16) + 20;
+            int l = chunkZ + rand.nextInt(16) + 20;
+            (new TRSModWorldGenKapokTree(false)).generate(world, rand, k, world.getHeightValue(k, l), l);
 		}
 	}
 

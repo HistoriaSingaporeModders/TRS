@@ -8,6 +8,7 @@ import me.spyobird.trs.lib.References;
 import me.spyobird.trs.lib.TRSModCreativeTabs;
 import me.spyobird.trs.lib.ToolMaterial;
 import me.spyobird.trs.lib.config.ConfigurationHandler;
+import me.spyobird.trs.lib.event.EventHandlerBoneMeal;
 import me.spyobird.trs.lib.event.EventHandlerMobSpawn;
 import me.spyobird.trs.lib.event.EventHandlerOreGen;
 import me.spyobird.trs.lib.worldgen.TRSModDungeonChestGen;
@@ -37,6 +38,7 @@ public class TRS_main
 	
 	public static EventHandlerOreGen oregen = new EventHandlerOreGen();
 	public static EventHandlerMobSpawn mobspawn = new EventHandlerMobSpawn();
+	public static EventHandlerBoneMeal bonemeal = new EventHandlerBoneMeal();
 	
 	public static TRSModCreativeTabs creativetabs = new TRSModCreativeTabs(CreativeTabs.getNextID(), "TRS");
 	
@@ -50,7 +52,6 @@ public class TRS_main
 		TRSModDungeonChestGen.GenInit();
 		
 		GameRegistry.registerWorldGenerator(new TRSModWorldGen());
-
 	}
 	
 	@EventHandler
@@ -58,6 +59,7 @@ public class TRS_main
 	{
 		MinecraftForge.ORE_GEN_BUS.register(oregen);
 		MinecraftForge.EVENT_BUS.register(mobspawn);
+		MinecraftForge.EVENT_BUS.register(bonemeal);
 	}
 	
 	@EventHandler
