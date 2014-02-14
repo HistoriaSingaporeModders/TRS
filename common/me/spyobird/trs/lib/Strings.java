@@ -6,25 +6,35 @@ public class Strings
 	public static final String BLOCKTINSTORAGE_UNLOCAL = "TinBlock";
 	public static final String BLOCKGRANITE_UNLOCAL = "Granite";
 	public static final String BLOCKKAPOKLOG_UNLOCAL = "KapokLog";
+	public static final String BLOCKKAPOKLEAF_UNLOCAL = "KapokLeaf";
+	public static final String BLOCKKAPOKSAPLING_UNLOCAL = "KapokSapling";
 			
 	public static final String BLOCKTINORE_LOCAL = "Tin Ore";
 	public static final String BLOCKTINSTORAGE_LOCAL = "Block Of Tin";
 	public static final String BLOCKGRANITE_LOCAL = "Granite";
 	public static final String BLOCKKAPOKLOG_LOCAL = "Kapok Wood";
+	public static final String BLOCKKAPOKLEAF_LOCAL = "Kapok Leaves";
+	public static final String BLOCKKAPOKSAPLING_LOCAL = "Kapok Sapling";
 	
 	public static final String BLOCKTINORE_TEXTURE = "Ore_Tin";
 	public static final String BLOCKTINSTORAGE_TEXTURE = "Block_Tin";
 	public static final String BLOCKGRANITE_TEXTURE = "Granite";
 	public static final String BLOCKKAPOKLOG_TEXTURE = "Log_Kapok";
+	public static final String BLOCKKAPOKLEAF_TEXTURE = "Leaf_Kapok";
+	public static final String BLOCKKAPOKSAPLING_TEXTURE = "Sapling_Kapok";
 	
 	public static final String BLOCKTINORE_KEY = "TIN";
 	public static final String BLOCKTINSTORAGE_KEY = "TIN_BLOCK";
 	public static final String BLOCKGRANITE_KEY = "GRANITE";
 	public static final String BLOCKKAPOKLOG_KEY = "KAPOK";
+	public static final String BLOCKKAPOKLEAF_KEY = "KAPOK_LEAF";
+	public static final String BLOCKKAPOKSAPLING_KEY = "KAPOK_SAPLING";
 	
 	public static final String BLOCKORE_CATAGORY = "ORE";
 	public static final String BLOCKSTORAGE_CATAGORY = "STORAGE";
 	public static final String BLOCKLOG_CATAGORY = "LOG";
+	public static final String BLOCKLEAF_CATAGORY = "LEAF";
+	public static final String BLOCKSAPLING_CATAGORY = "SAPLING";
 	
 	public static final String ITEMTININGOT_UNLOCAL = "TinIngot";
 	public static final String ITEMTINSWORD_UNLOCAL = "TinSword";
